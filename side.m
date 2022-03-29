@@ -1,8 +1,8 @@
-classdef side
+classdef side < uint8
     enumeration
-        LEFT
-        RIGHT
-        TOP
-        BOTTOM
+        TOP (1)
+        LEFT (2)
+        BOTTOM (3)
+        RIGHT (4)
     end
 end
