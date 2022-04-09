@@ -1,5 +1,4 @@
-red = [188 52 45];
-green = [50 138 34];
-blue = [6 127 210];
+HEIGHT = 15;
+WIDTH = 15;
 
-maze = generate_maze(15, 15);
+maze = generate_maze(HEIGHT, WIDTH);

@@ -1,9 +1,11 @@
 clc
 clear
-close
+close all
 
 addpath('consts');
 addpath('maze');
 
 addpath('intro');
 addpath('simulation');
+
+colors

@@ -1,9 +1,9 @@
-scale = 5;
+SCALE = 5;
 
-right_hand_path = right_hand_solver(maze, scale);
-optimal_path = optimal_solver(maze, scale);
+right_hand_path = right_hand_solver(maze, SCALE);
+optimal_path = optimal_solver(maze, SCALE);
 
 paths = {right_hand_path, optimal_path};
-colors = {blue, green};
+colors = {BLUE, GREEN};
 
-plot_maze(maze, scale, paths, colors)
+plot_maze(maze, SCALE, paths, colors)

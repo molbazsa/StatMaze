@@ -1,8 +1,8 @@
-scale = 3;
+SCALE = 3;
 
-random_path = random_solver(maze, scale);
+random_path = random_solver(maze, SCALE);
 
 paths = {random_path};
-colors = {red};
+colors = {RED};
 
-plot_maze(maze, scale, paths, colors)
+plot_maze(maze, SCALE, paths, colors)
