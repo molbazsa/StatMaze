@@ -16,7 +16,7 @@ for size = SIZES
     stats_random = zeros(REPETITION, N_RUNS);
     
     max_random = zeros(1, N_RUNS);
-    risk = zeros(1, N_RUNS);
+    slowdown = zeros(1, N_RUNS);
     
     beats_right = zeros(1, N_RUNS);
     is_optimal = zeros(1, N_RUNS);
@@ -33,7 +33,7 @@ for size = SIZES
         stats_random(:, i) = l_random';
         
         max_random(i) = max(l_random);
-        risk(i) = max_random(i) / l_right;
+        slowdown(i) = max_random(i) / l_right;
         
         beats_right(i) = sum(l_random < l_right);
         is_optimal(i) = sum(l_random == l_optimal);
@@ -48,14 +48,23 @@ for size = SIZES
     disp(stats_right);
     disp('Random:');
     disp(stats_random);
+    disp('Random átlag:');
+    disp(mean(stats_random));
     
     disp('Max random:');
     disp(max_random);
-    disp('Kockázat:');
-    disp(risk);
+    disp('Max lassítás:');
+    disp(slowdown);
     
-    disp('Jobb, mint a jobb kéz:');
+    disp('Rövidebb, mint a jobb kéz:');
     disp(beats_right);
     disp('A random útvonal optimális:');
     disp(is_optimal);
+    
+    close all
+    simulation_graph
+    
+    disp('Press any key');
+    pause;
+    close all;
 end

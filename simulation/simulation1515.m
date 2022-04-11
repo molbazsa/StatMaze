@@ -47,14 +47,23 @@ for size = SIZES
     disp(stats_right);
     disp('Random:');
     disp(stats_random);
+    disp('Random átlag:');
+    disp(mean(stats_random));
     
     disp('Max random:');
     disp(max_random);
-    disp('Kockázat:');
-    disp(risk);
+    disp('Max lassítás:');
+    disp(slowdown);
     
-    disp('Jobb, mint a jobb kéz:');
+    disp('Rövidebb, mint a jobb kéz:');
     disp(beats_right);
     disp('A random útvonal optimális:');
     disp(is_optimal);
+    
+    close all
+    simulation_graph
+    
+    disp('Press any key');
+    pause;
+    close all;
 end
